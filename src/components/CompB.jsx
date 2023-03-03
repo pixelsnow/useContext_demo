@@ -1,3 +1,4 @@
+import { UserContextProvider } from "../UserContext";
 import CompC from "./CompC";
 
 const CompB = (props) => {
@@ -5,8 +6,9 @@ const CompB = (props) => {
   return (
     <div>
       <h2>Component B</h2>
-      <p>{info}</p>
-      <CompC info={info} />
+      <UserContextProvider>
+        <CompC info={info} />
+      </UserContextProvider>
     </div>
   );
 };

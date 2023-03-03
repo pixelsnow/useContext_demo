@@ -5,7 +5,6 @@ const CompA = (props) => {
   return (
     <div>
       <h2>Component A</h2>
-      <p>{info}</p>
       <CompB info={info} />
     </div>
   );
